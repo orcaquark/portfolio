@@ -1,0 +1,155 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --purple: #9933ff;
+  --purple-dim: #6b1fb3;
+  --purple-faint: #3a1060;
+  --bg: #141414;
+  --text: #e0e0e0;
+  --green: #00ff00;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  background: var(--bg);
+  overflow: hidden;
+  cursor: default;
+  font-family: 'Courier Prime', fallback, monospace;
+}
+
+/* ── SCREEN MANAGEMENT ── */
+.screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+.screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.screen.exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ══════════════════════════════════
+   SCREEN 1 — Logo + Orca
+══════════════════════════════════ */
+#screen1 {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo-text {
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--purple);
+  letter-spacing: 0.05em;
+  animation: logoFadeIn 1.2s ease forwards;
+}
+
+.orca-wrap {
+  animation: logoFadeIn 1.4s ease forwards 0.3s;
+  opacity: 0;
+}
+
+@keyframes logoFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* SVG orca */
+.orca-svg {
+  width: clamp(200px, 30vw, 320px);
+  filter: drop-shadow(0 0 18px rgba(153,51,255,0.35));
+}
+
+/* ══════════════════════════════════
+   SCREEN 2 — Terminal boot
+══════════════════════════════════ */
+#screen2 {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.terminal {
+  width: 100%;
+  max-width: 700px;
+  font-size: clamp(0.75rem, 1.6vw, 0.95rem);
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.ascii-art {
+  font-size: clamp(0.4rem, 1.1vw, 0.62rem);
+  line-height: 1.15;
+  color: var(--purple);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.2rem;
+  white-space: pre;
+  opacity: 0;
+}
+.ascii-art.show { opacity: 1; }
+
+.boot-lines { white-space: pre; }
+
+.line { display: block; opacity: 0; }
+.line.show { opacity: 1; }
+
+.ok    { color: var(--purple); font-weight: 700; }
+.done  { color: var(--purple); }
+.auth  { color: var(--purple); font-weight: 700; letter-spacing: 0.08em; }
+.level { color: var(--purple); }
+.ready { color: var(--purple); font-weight: 700; letter-spacing: 0.1em; }
+
+/* blinking cursor */
+.cursor::after {
+  content: '█';
+  color: var(--purple);
+  animation: blink 0.9s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ══════════════════════════════════
+   SCREEN 3 — Click to enter
+══════════════════════════════════ */
+#screen3 {
+  flex-direction: column;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.os-title {
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--purple);
+  opacity: 0;
+  animation: s3FadeIn 1.2s ease forwards 0.2s;
+}
+
+.click-hint {
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  color: white;
+  letter-spacing: 0.18em;
+  opacity: 0;
+  animation: s3FadeIn 1s ease forwards 1s;
+}
+
+@keyframes s3FadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#screen3.exit-click {
+  animation: screenFadeOut 0.6s ease forwards;
+}
+@keyframes screenFadeOut {
+  to { opacity: 0; }
+}
