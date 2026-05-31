@@ -1,0 +1,191 @@
+/* ── SCREEN MANAGEMENT ── */
+
+.screen {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.4s ease;
+}
+
+.screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.screen.exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── SCREEN 1 ── */
+
+#screen1 {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo-text {
+  font-size: clamp(2.5rem, 7.5vw, 5rem);
+  color: var(--purple);
+  letter-spacing: 0.05em;
+
+  animation: logoFadeIn 0.8s ease forwards;
+}
+
+.orca-wrap {
+  opacity: 0;
+  animation: logoFadeIn 0.8s ease forwards 0.2s;
+}
+
+.orca-svg {
+  width: clamp(200px, 30vw, 320px);
+}
+
+@keyframes logoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── SCREEN 2 ── */
+
+#screen2 {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.terminal {
+  width: 100%;
+  max-width: 700px;
+
+  font-size: clamp(0.75rem, 1.6vw, 0.95rem);
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.ascii-art {
+  font-size: clamp(0.55rem, 1.5vw, 0.85rem);
+  line-height: 1.15;
+
+  color: var(--purple);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+
+  white-space: pre;
+  opacity: 0;
+}
+
+.ascii-art.show {
+  opacity: 1;
+}
+
+.boot-lines {
+  white-space: pre;
+}
+
+.line {
+  display: block;
+  opacity: 0;
+}
+
+.line.show {
+  opacity: 1;
+}
+
+.ok,
+.done,
+.auth,
+.level,
+.ready {
+  color: var(--purple);
+}
+
+.ok,
+.auth,
+.ready {
+  font-weight: 700;
+}
+
+.auth {
+  letter-spacing: 0.08em;
+}
+
+.ready {
+  letter-spacing: 0.1em;
+}
+
+/* ── CURSOR ── */
+
+.cursor::after {
+  content: "█";
+  color: var(--purple);
+  animation: blink 0.9s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ── SCREEN 3 ── */
+
+#screen3 {
+  flex-direction: column;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.os-title {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--purple);
+
+  opacity: 0;
+  animation: s3FadeIn 1.2s ease forwards 0.2s;
+}
+
+.click-hint {
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+
+  color: white;
+  letter-spacing: 0.18em;
+
+  opacity: 0;
+  animation: s3FadeIn 1s ease forwards 1s;
+}
+
+@keyframes s3FadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#screen3.exit-click {
+  animation: screenFadeOut 0.3s ease forwards;
+}
+
+@keyframes screenFadeOut {
+  to {
+    opacity: 0;
+  }
+}
