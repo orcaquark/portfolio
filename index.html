@@ -4,81 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OrcaQuark</title>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta
+    name="description"
+    content="Welcome to the portfolio of Anthony Zhang, a Computer Engineer student at UCSD building whatever I find interesting or cool. Feel free to explore and see what I'm up to!"
+  />
+
+  <!-- styles or smth -->
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/splash.css">
+
+  <!-- animation script -->
+  <script src="/scripts/intro-animation.js" defer></script>
 </head>
 <body>
 
-  <!-- ══ SCREEN 1 ══ -->
+  <!-- start screen -->
   <div class="screen active" id="screen1">
     <div class="logo-text">OrcaQuark</div>
     <div class="orca-wrap">
-      <svg class="orca-svg" viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="
-          M 260 90
-          C 285 80, 310 75, 325 82
-          C 318 88, 305 92, 295 95
-          C 310 100, 320 108, 318 116
-          C 308 112, 295 106, 275 105
-
-          C 270 118, 258 128, 248 132
-          C 242 136, 238 145, 242 158
-          C 232 150, 226 140, 228 130
-          C 220 136, 212 148, 215 162
-          C 204 152, 200 138, 204 126
-
-          C 195 130, 185 138, 178 148
-          C 176 138, 179 128, 186 120
-
-          C 165 125, 145 128, 122 122
-          C 100 116, 78 108, 62 102
-          C 50 98, 36 98, 28 106
-          C 24 100, 28 90, 38 86
-          C 22 82, 12 74, 15 62
-          C 26 68, 40 74, 54 76
-
-          C 44 66, 42 52, 50 44
-          C 56 52, 58 64, 55 74
-
-          C 68 64, 80 58, 96 58
-          C 92 48, 94 36, 104 30
-          C 108 42, 106 56, 100 64
-
-          C 118 60, 142 62, 165 68
-          C 184 73, 205 76, 225 76
-          C 242 76, 255 82, 260 90
-          Z
-        "
-          stroke="#9933ff"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          fill="none"
-        />
-      </svg>
+      <img src="orcaquark.svg" class="orca-svg">
     </div>
   </div>
 
-  <!-- ══ SCREEN 2 ══ -->
+  <!-- post screen -->
   <div class="screen" id="screen2">
     <div class="terminal">
       <div class="ascii-art" id="ascii">
- ██████╗ ██████╗  ██████╗ █████╗  ██████╗ ██╗   ██╗ █████╗ ██████╗ ██╗  ██╗
-██╔═══██╗██╔══██╗██╔════╝██╔══██╗██╔═══██╗██║   ██║██╔══██╗██╔══██╗██║ ██╔╝
-██║   ██║██████╔╝██║     ███████║██║   ██║██║   ██║███████║██████╔╝█████╔╝ 
-██║   ██║██╔══██╗██║     ██╔══██║██║▄▄ ██║██║   ██║██╔══██║██╔══██╗██╔═██╗ 
-╚██████╔╝██║  ██║╚██████╗██║  ██║╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║  ██╗
- ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚══▀▀═╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝</div>
+  ___                 ___                   _    
+ / _ \ _ __ ___ __ _ / _ \ _   _  __ _ _ __| | __
+| | | | '__/ __/ _` | | | | | | |/ _` | '__| |/ /
+| |_| | | | (_| (_| | |_| | |_| | (_| | |  |   < 
+ \___/|_|  \___\__,_|\__\_\\__,_|\__,_|_|  |_|\_\
+      </div>
       <div class="boot-lines" id="bootLines"></div>
     </div>
   </div>
 
-  <!-- ══ SCREEN 3 ══ -->
+  <!-- boot screen -->
   <div class="screen" id="screen3">
-    <div class="os-title">OrcaQuarkOS</div>
+    <div class="os-title">OrcaQuark</div>
     <div class="click-hint">Click Anywhere To Start</div>
   </div>
-
-  <script src="splash.js"></script>
 </body>
 </html>
