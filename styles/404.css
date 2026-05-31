@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards 0.2s;
+}
+ 
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+ 
+h1 {
+  font-size: clamp(5rem, 18vw, 10rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+}
+ 
+p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text);
+}
+ 
+a {
+  margin-top: 2rem;
+  padding: 0.6em 1.5em;
+  background: var(--purple);
+  color: var(--text);
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid var(--purple);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+ 
+a:hover {
+  background: transparent;
+  color: var(--purple);
+}
