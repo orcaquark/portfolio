@@ -5,7 +5,7 @@ nav {
   --nav-gap: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, var(--nav-size));
+  grid-template-rows: repeat(4, var(--nav-size));
   gap: var(--nav-gap);
   padding: var(--nav-gap);
   flex-shrink: 0;
@@ -52,19 +52,12 @@ nav {
   justify-content: center;
 }
 
-.nav-icon img,
-.nav-icon svg {
-  width: 90%;
-  height: 90%;
-
-  fill: none;
-  stroke: var(--purple);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.nav-icon img {
+  width: 85%;
+  height: 85%;
 }
 
 .nav-label {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text);
 }
