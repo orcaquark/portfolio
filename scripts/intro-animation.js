@@ -67,7 +67,7 @@ let s3Ready = false;
 s3.addEventListener('click', () => {
   if (!s3Ready) return;
   s3.classList.add('exit-click');
-  setTimeout(() => { window.location.href = '/home.html'; }, 350);
+  setTimeout(() => { window.location.href = '/home/index.html'; }, 350);
 });
 
 // start the sequence
