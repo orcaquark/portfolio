@@ -1,34 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* ── RESET ── */
+/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ── GLOBAL VARIABLES ── */
 :root {
+  --purple-light: #b97aff;
   --purple: #9747ff;
-  --bg: #151515;
-  --bg-card: #1a1a1a;
-  --bg-hover: #393939;
-  --text: #e0e0e0;
+  --purple-dark: #7a2ee0;
+  --gray-dark: #151517;
+  --gray-mid-dark: #1e1e22;
+  --gray-mid: #2a2a30;
+  --gray-mid-light: #3d3d45;
+  --gray-light: #6b6b78;
+  --white: #f0eeff;
+  --black: #0d0d0f;
 }
 
-/* ── GLOBAL PAGE STYLING ── */
 html,
 body {
   width: 100%;
   height: 100%;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--gray-mid-dark);
+  color: var(--white);
   font-family: "Courier Prime", monospace;
   overflow: hidden;
   cursor: default;
 }
 
-/* ── SHARED LAYOUT ── */
 .layout {
   display: flex;
   width: 100%;

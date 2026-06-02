@@ -20,20 +20,20 @@ body {
 h1 {
   font-size: clamp(5rem, 18vw, 10rem);
   font-weight: 400;
-  color: var(--text);
+  color: var(--white);
   line-height: 1;
 }
  
 p {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--text);
+  color: var(--white);
 }
  
 a {
   margin-top: 2rem;
   padding: 0.6em 1.5em;
   background: var(--purple);
-  color: var(--text);
+  color: var(--white);
   font-family: 'Courier Prime', monospace;
   font-size: clamp(1rem, 2vw, 1.2rem);
   text-decoration: none;

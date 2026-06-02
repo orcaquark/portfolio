@@ -74,7 +74,7 @@
 
   font-size: clamp(0.75rem, 1.6vw, 0.95rem);
   line-height: 1.7;
-  color: var(--text);
+  color: var(--white);
 }
 
 .ascii-art {
@@ -146,7 +146,7 @@
 
 #screen3 {
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   cursor: pointer;
 }
 
@@ -161,7 +161,7 @@
 .click-hint {
   font-size: clamp(0.85rem, 2vw, 1.1rem);
 
-  color: white;
+  color: var(--white);
   letter-spacing: 0.18em;
 
   opacity: 0;
