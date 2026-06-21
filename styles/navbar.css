@@ -21,7 +21,7 @@ nav {
   width: var(--nav-size);
   height: var(--nav-size);
 
-  border: 4px solid var(--white);
+  border: 2px solid var(--white);
   background: var(--gray-mid);
 
   color: var(--text);

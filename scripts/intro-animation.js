@@ -1,6 +1,6 @@
-const s1 = document.getElementById('screen1');
-const s2 = document.getElementById('screen2');
-const s3 = document.getElementById('screen3');
+const s1 = document.getElementById('start-screen');
+const s2 = document.getElementById('boot-screen');
+const s3 = document.getElementById('post-screen');
 const ascii = document.getElementById('ascii');
 const bootLines = document.getElementById('bootLines');
 
