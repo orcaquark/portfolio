@@ -55,7 +55,7 @@ main {
   color: var(--white);
 }
 
-.info-text p + p {
+.info-text p:not(.status-face):not(.status-divider) + p {
   margin-top: 1rem;
 }
 
@@ -150,52 +150,53 @@ main {
   background: var(--purple);
 }
 
+.status-divider {
+  height: 2px;
+  background: var(--gray-mid-light);
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
 .status-rotator {
   position: relative;
-  height: 4.5em;
+  height: 1.5em;
   line-height: 1.5;
   overflow: hidden;
+  perspective: 1400px;
+  padding: 0px 3px;
+  box-sizing: border-box;
 }
 
-.status-rotator p {
+.status-prism {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.status-face {
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  opacity: 0;
-  transform: translateY(8px);
-  animation: rotateStatus 10s infinite;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  transform-origin: center center;
+  font-size: inherit;
+  line-height: 1.5;
   color: var(--white);
+  background: var(--gray-mid-dark);
+  backface-visibility: hidden;
 }
 
-.status-rotator p:nth-child(1) { animation-delay: 0s; }
-.status-rotator p:nth-child(2) { animation-delay: 2s; }
-.status-rotator p:nth-child(3) { animation-delay: 4s; }
-.status-rotator p:nth-child(4) { animation-delay: 6s; }
-.status-rotator p:nth-child(5) { animation-delay: 8s; }
-
-@keyframes rotateStatus {
-  0% {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  5% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  20% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  25% {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-}
+.status-face:nth-child(1) { transform: rotateX(0deg)    translateZ(var(--prism-radius)); }
+.status-face:nth-child(2) { transform: rotateX(-72deg)  translateZ(var(--prism-radius)); }
+.status-face:nth-child(3) { transform: rotateX(-144deg) translateZ(var(--prism-radius)); }
+.status-face:nth-child(4) { transform: rotateX(-216deg) translateZ(var(--prism-radius)); }
+.status-face:nth-child(5) { transform: rotateX(-288deg) translateZ(var(--prism-radius)); }
