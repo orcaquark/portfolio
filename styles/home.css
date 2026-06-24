@@ -9,8 +9,9 @@ main {
 
 .content {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  position: relative;
+  gap: 1.5rem;
   width: 100%;
   max-width: 860px;
 }
@@ -20,9 +21,17 @@ main {
   z-index: 1;
   display: flex;
   gap: 2rem;
-  min-width: 320px;
-  max-width: 760px;
+  width: 760px;
+  box-sizing: border-box;
   padding: 2rem;
+  background: var(--gray-mid-dark);
+  border: 2px solid var(--white);
+}
+
+.github-card {
+  width: 760px;
+  box-sizing: border-box;
+  padding: 1.5rem 2rem;
   background: var(--gray-mid-dark);
   border: 2px solid var(--white);
 }
@@ -42,7 +51,6 @@ main {
 }
 
 .info-text p {
-  font-size: 1rem;
   line-height: 1.5;
   color: var(--white);
 }
@@ -77,4 +85,117 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+
+.github-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.github-total {
+  color: var(--purple);
+}
+
+.github-heatmap-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.github-heatmap {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+}
+
+.github-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.github-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid var(--gray-mid-light);
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+
+.github-cell:hover {
+  transform: scale(1.15);
+  border-color: var(--white);
+  z-index: 1;
+}
+
+.level-0 {
+  background: var(--gray-mid);
+}
+
+.level-1 {
+  background: #2b1f3a;
+}
+
+.level-2 {
+  background: #4b2a7a;
+}
+
+.level-3 {
+  background: var(--purple-dark);
+}
+
+.level-4 {
+  background: var(--purple);
+}
+
+.status-rotator {
+  position: relative;
+  height: 4.5em;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.status-rotator p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: rotateStatus 10s infinite;
+  color: var(--white);
+}
+
+.status-rotator p:nth-child(1) { animation-delay: 0s; }
+.status-rotator p:nth-child(2) { animation-delay: 2s; }
+.status-rotator p:nth-child(3) { animation-delay: 4s; }
+.status-rotator p:nth-child(4) { animation-delay: 6s; }
+.status-rotator p:nth-child(5) { animation-delay: 8s; }
+
+@keyframes rotateStatus {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 }
