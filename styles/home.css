@@ -29,14 +29,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 30px;
   padding: 0 0 0 1rem;
   background: var(--gray-mid);
   border-bottom: 2px solid var(--white);
 }
 
 .info-titlebar-path {
-  padding: 0.58rem 0;
-  font-size: 0.79rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 0.8rem;
   color: var(--gray-light);
 }
 
@@ -50,7 +53,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 40px;
-  height: 29px;
+  height: 28px;
   font-size: 0.9rem;
   line-height: 1;
   color: var(--white);
