@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const FACE_ANGLE = 360 / faces.length; // 72deg for a pentagon
   const HOLD_MS = 2500;
 
-  // Radius based on height now, since faces stack vertically.
+  // Radius based on the full container height — each face is exactly
+  // `rotator.offsetHeight` tall, so the inscribed-prism radius formula
+  // (s / (2*tan(pi/n))) needs the real height, not a fraction of it.
   function setRadius() {
-    const effectiveHeight = rotator.offsetHeight * 0.75;
-    const radius = (effectiveHeight / 2) / Math.tan(Math.PI / faces.length);
+    const radius = (rotator.offsetHeight / 2) / Math.tan(Math.PI / faces.length);
     prism.style.setProperty("--prism-radius", `${radius}px`);
   }
 

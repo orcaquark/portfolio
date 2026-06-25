@@ -1,5 +1,5 @@
 const username = "orcaquark";
-const HEATMAP_DAYS = 320; // a full year, now that the heatmap has its own dedicated box
+const HEATMAP_DAYS = 365; // a full year, now that the heatmap has its own dedicated box
 
 async function loadGithubActivity() {
   try {

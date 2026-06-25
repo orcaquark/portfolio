@@ -11,29 +11,77 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 2.5rem;
   width: 100%;
-  max-width: 860px;
+  max-width: 960px;
 }
 
 .info-card {
   position: relative;
   z-index: 1;
-  display: flex;
-  gap: 2rem;
-  width: 760px;
+  width: 865px;
   box-sizing: border-box;
-  padding: 2rem;
   background: var(--gray-mid-dark);
   border: 2px solid var(--white);
 }
 
+.info-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 1rem;
+  background: var(--gray-mid);
+  border-bottom: 2px solid var(--white);
+}
+
+.info-titlebar-path {
+  padding: 0.58rem 0;
+  font-size: 0.79rem;
+  color: var(--gray-light);
+}
+
+.win-controls {
+  display: flex;
+  height: 100%;
+}
+
+.win-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 29px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: var(--white);
+  border-left: 1px solid var(--gray-mid-light);
+  cursor: default;
+  user-select: none;
+}
+
+.win-btn:hover {
+  background: var(--gray-mid-light);
+}
+
+.win-close:hover {
+  background: var(--purple-dark);
+}
+
+.info-body {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
 .github-card {
-  width: 760px;
+  width: 865px;
   box-sizing: border-box;
-  padding: 1.5rem 2rem;
   background: var(--gray-mid-dark);
   border: 2px solid var(--white);
+}
+
+.github-body {
+  padding: 1.5rem 2rem;
 }
 
 .info-left {
@@ -47,7 +95,7 @@ main {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 700;
   line-height: 1;
-  color: var(--white);
+  color: var(--purple);
 }
 
 .info-text p {
@@ -101,7 +149,10 @@ main {
 
 .github-heatmap-wrapper {
   width: 100%;
+  box-sizing: border-box;
   overflow-x: auto;
+  padding: 3px;
+  margin: -3px;
 }
 
 .github-heatmap {
@@ -152,7 +203,7 @@ main {
 
 .status-divider {
   height: 2px;
-  background: var(--gray-mid-light);
+  background: var(--gray-light);
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
 }
