@@ -54,7 +54,6 @@ main {
   justify-content: center;
   width: 40px;
   height: 28px;
-  font-size: 0.9rem;
   line-height: 1;
   color: var(--white);
   border-left: 1px solid var(--gray-mid-light);
