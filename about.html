@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrcaQuark - About Me</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/navbar.css">
+  <link rel="stylesheet" href="/styles/about.css">
+
+  <!-- scripts -->
+  <script src="/scripts/discord-status.js" defer></script>
+</head>
+<body>
+
+<div class="layout">
+  <nav>
+    <a class="nav-btn" href="/home/index.html">
+      <div class="nav-icon">
+        <img src="/icons/home.svg" alt="Home Icon">
+      </div>
+      <span class="nav-label">Home</span>
+    </a>
+    <a class="nav-btn active" href="/about/index.html">
+      <div class="nav-icon">
+        <img src="/icons/about-me.svg" alt="About Me Icon">
+      </div>
+      <span class="nav-label">About Me</span>
+    </a>
+    <a class="nav-btn" href="/wip.html">
+      <div class="nav-icon">
+        <img src="/icons/projects.svg" alt="Projects Icon">
+      </div>
+      <span class="nav-label">Projects</span>
+    </a>
+    <a class="nav-btn" href="/wip.html">
+      <div class="nav-icon">
+        <img src="/icons/experience.svg" alt="Experience Icon">
+      </div>
+      <span class="nav-label">Experience</span>
+    </a>
+    <a class="nav-btn" href="/wip.html">
+      <div class="nav-icon">
+        <img src="/icons/gallery.svg" alt="Gallery Icon">
+      </div>
+      <span class="nav-label">Gallery</span>
+    </a>
+    <a class="nav-btn" href="https://github.com/orcaquark" target="_blank" rel="noopener noreferrer">
+      <div class="nav-icon">
+        <img src="/icons/github.svg" alt="GitHub Icon">
+      </div>
+      <span class="nav-label">GitHub</span>
+    </a>
+    <a class="nav-btn" href="https://www.linkedin.com/in/anthony-zhang-480594354/" target="_blank" rel="noopener noreferrer">
+      <div class="nav-icon">
+        <img src="/icons/linkedin.svg" alt="LinkedIn Icon">
+      </div>
+      <span class="nav-label">LinkedIn</span>
+    </a>
+    <a class="nav-btn" href="/home/resume.pdf" target="_blank" rel="noopener noreferrer">
+      <div class="nav-icon">
+        <img src="/icons/resume.svg" alt="Resume Icon">
+      </div>
+      <span class="nav-label">Resume</span>
+    </a>
+  </nav>
+  <main>
+    <div class="content">
+      <div class="whoami-card">
+        <div class="card-titlebar">
+          <span class="card-titlebar-path">C:\Users\Anthony&gt; whoami</span>
+          <span class="win-controls">
+            <span class="win-btn win-min">&#8211;</span>
+            <span class="win-btn win-max">&#9633;</span>
+            <span class="win-btn win-close">&times;</span>
+          </span>
+        </div>
+        <div class="whoami-body">
+          <h2 class="card-heading whoami-heading">// identity</h2>
+          <div class="whoami-content">
+          <div class="whoami-photo-frame">
+            <img src="/home/photo.png" alt="Anthony Zhang">
+          </div>
+          <dl class="whoami-fields">
+            <div class="whoami-row"><dt>name</dt><dd>Anthony Zhang</dd></div>
+            <div class="whoami-row"><dt>role</dt><dd>computer engineering student </dd></div>
+            <div class="whoami-row"><dt>school</dt><dd>UCSD, class of 2030</dd></div>
+            <div class="whoami-row"><dt>focus</dt><dd>consumer-friendly, repairable tech</dd></div>
+            <div class="whoami-row"><dt>also</dt><dd>astrophotographer, painter, gamer</dd></div>
+            <div class="whoami-row"><dt>status</dt><dd id="discord-status">building and being eepy</dd></div>
+          </dl>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <div class="card-titlebar">
+          <span class="card-titlebar-path">C:\Users\Anthony&gt; type about.md</span>
+          <span class="win-controls">
+            <span class="win-btn win-min">&#8211;</span>
+            <span class="win-btn win-max">&#9633;</span>
+            <span class="win-btn win-close">&times;</span>
+          </span>
+        </div>
+        <div class="about-body">
+        <h2 class="card-heading">// about me</h2>
+        <p>
+          Hi! I'm a Computer Engineering student at UCSD. I believe modern devices 
+          have gotten too unrepairable and anti-consumer, and I want to fix that. 
+          Technology should respect the people using them, so it should be something that 
+          you can open, fix, and actually own. Additionally, I want to make sustainable technology
+          that is designed to last and benefit others.
+        </p>
+        <p>
+          That said, a lot of what I do is motivated by the fact that building cool things is fun and challenging. 
+          Most of my time right now goes into Kindred, where I work on user analytics 
+          and feature development, as well as this site, which I view as a constant work in progress.
+        </p>
+        <p>
+          Outside of tech, I'm an astrophotographer and painter. I'm always looking forward to my next side quest,
+          and most of the time you can find me on a walk, reading my next book, or playing my favorite games.
+        </p>
+        </div>
+      </div>
+
+      <div class="grid-cards">
+        <div class="skills-card">
+          <div class="card-titlebar">
+            <span class="card-titlebar-path">C:\Users\Anthony&gt; dir stack\</span>
+            <span class="win-controls">
+              <span class="win-btn win-min">&#8211;</span>
+              <span class="win-btn win-max">&#9633;</span>
+              <span class="win-btn win-close">&times;</span>
+            </span>
+          </div>
+          <div class="skills-body">
+          <h2 class="card-heading">// stack</h2>
+          <div class="skill-group">
+            <span class="skill-label">software</span>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">NumPy & AstroPy</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Javascript</span>
+              <span class="tag">HTML / CSS</span>
+              <span class="tag">PostHog</span>
+              <span class="tag">Java</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-label">hardware</span>
+            <div class="tag-row">
+              <span class="tag">Breadboards</span>
+              <span class="tag">Circuit Fundamentals</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-label">learning</span>
+            <div class="tag-row">
+              <span class="tag">KiCad</span>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="now-card">
+          <div class="card-titlebar">
+            <span class="card-titlebar-path">C:\Users\Anthony&gt; history</span>
+            <span class="win-controls">
+              <span class="win-btn win-min">&#8211;</span>
+              <span class="win-btn win-max">&#9633;</span>
+              <span class="win-btn win-close">&times;</span>
+            </span>
+          </div>
+          <div class="now-body">
+          <h2 class="card-heading">// now</h2>
+          <ul class="now-list">
+            <li><span class="prompt">&gt;</span> building the Kindred productivity agent</li>
+            <li><span class="prompt">&gt;</span> designing and creating this portfolio</li>
+            <li><span class="prompt">&gt;</span> eyeing the Framework 13 Pro</li>
+            <li><span class="prompt">&gt;</span> planning my next astrophotography session</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

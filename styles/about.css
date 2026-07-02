@@ -1,0 +1,215 @@
+main {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5.8rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable both-edges;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  max-width: 960px;
+}
+
+.card-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+.card-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0 0 0 1rem;
+  background: var(--gray-mid);
+  border-bottom: 2px solid var(--white);
+}
+
+.card-titlebar-path {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 0.8rem;
+  color: var(--gray-light);
+}
+
+.win-controls {
+  display: flex;
+  height: 100%;
+}
+
+.win-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 28px;
+  line-height: 1;
+  color: var(--white);
+  border-left: 1px solid var(--gray-mid-light);
+  cursor: default;
+  user-select: none;
+}
+
+.win-btn:hover {
+  background: var(--gray-mid-light);
+}
+
+.win-close:hover {
+  background: var(--purple-dark);
+}
+
+.whoami-card {
+  width: 865px;
+  box-sizing: border-box;
+  background: var(--gray-mid-dark);
+  border: 2px solid var(--white);
+}
+
+.whoami-body {
+  padding: 1.75rem 2rem;
+}
+
+.whoami-heading {
+  margin-bottom: 1.25rem;
+}
+
+.whoami-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.whoami-photo-frame {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid var(--white);
+}
+
+.whoami-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.whoami-fields {
+  flex: 1;
+}
+
+.whoami-row {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.whoami-row dt {
+  width: 70px;
+  flex-shrink: 0;
+  color: var(--gray-light);
+}
+
+.whoami-row dd {
+  color: var(--white);
+}
+
+.about-card {
+  width: 865px;
+  box-sizing: border-box;
+  background: var(--gray-mid-dark);
+  border: 2px solid var(--white);
+}
+
+.about-body {
+  padding: 1.75rem 2rem;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.about-card p + p {
+  margin-top: 1rem;
+}
+
+.grid-cards {
+  display: flex;
+  gap: 2rem;
+  width: 865px;
+}
+
+.skills-card,
+.now-card {
+  flex: 1;
+  box-sizing: border-box;
+  background: var(--gray-mid-dark);
+  border: 2px solid var(--white);
+}
+
+.skills-body,
+.now-body {
+  padding: 1.5rem 1.75rem;
+}
+
+.skill-group + .skill-group {
+  margin-top: 1.1rem;
+}
+
+.skill-label {
+  display: block;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--gray-light);
+  margin-bottom: 0.5rem;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--white);
+  border: 1px solid var(--gray-mid-light);
+  background: var(--gray-mid);
+}
+
+.now-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.now-list li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.prompt {
+  color: var(--purple);
+  margin-right: 0.4rem;
+}
