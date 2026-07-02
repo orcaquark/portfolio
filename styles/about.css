@@ -204,12 +204,14 @@ main {
 }
 
 .now-list li {
+  display: flex;
+  gap: 0.4rem;
   font-size: 0.95rem;
   line-height: 1.5;
   color: var(--white);
 }
 
 .prompt {
+  flex-shrink: 0;
   color: var(--purple);
-  margin-right: 0.4rem;
 }
