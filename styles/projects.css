@@ -70,7 +70,6 @@ main {
   background: var(--purple-dark);
 }
 
-/* intro card, same shape as the about/whoami cards */
 .intro-card {
   width: 865px;
   box-sizing: border-box;
@@ -88,7 +87,17 @@ main {
   color: var(--white);
 }
 
-/* project cards — one per row, full width, media + info split */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.project-list .project-card:nth-child(even) .project-body {
+  flex-direction: row-reverse;
+}
+
 .project-card {
   width: 865px;
   box-sizing: border-box;
@@ -200,41 +209,4 @@ main {
 
 .project-link:hover {
   color: var(--purple);
-}
-
-/* "more on the way" placeholder card */
-.project-card.placeholder-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 88px;
-  border-style: dashed;
-  border-color: var(--gray-mid-light);
-  background: transparent;
-}
-
-.project-card.placeholder-card:hover {
-  border-color: var(--gray-light);
-}
-
-.placeholder-text {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--gray-light);
-}
-
-.blink-cursor {
-  display: inline-block;
-  width: 8px;
-  height: 1em;
-  background: var(--purple);
-  animation: blink 1s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
 }
