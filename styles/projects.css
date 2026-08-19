@@ -1,0 +1,240 @@
+main {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5.8rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable both-edges;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  max-width: 960px;
+}
+
+.card-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+.card-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0 0 0 1rem;
+  background: var(--gray-mid);
+  border-bottom: 2px solid var(--white);
+}
+
+.card-titlebar-path {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 0.8rem;
+  color: var(--gray-light);
+}
+
+.win-controls {
+  display: flex;
+  height: 100%;
+}
+
+.win-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 28px;
+  line-height: 1;
+  color: var(--white);
+  border-left: 1px solid var(--gray-mid-light);
+  cursor: default;
+  user-select: none;
+}
+
+.win-btn:hover {
+  background: var(--gray-mid-light);
+}
+
+.win-close:hover {
+  background: var(--purple-dark);
+}
+
+/* intro card, same shape as the about/whoami cards */
+.intro-card {
+  width: 865px;
+  box-sizing: border-box;
+  background: var(--gray-mid-dark);
+  border: 2px solid var(--white);
+}
+
+.intro-body {
+  padding: 1.75rem 2rem;
+}
+
+.intro-body p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+/* project cards — one per row, full width, media + info split */
+.project-card {
+  width: 865px;
+  box-sizing: border-box;
+  background: var(--gray-mid-dark);
+  border: 2px solid var(--white);
+}
+
+.project-body {
+  display: flex;
+  gap: 2rem;
+  padding: 1.75rem 2rem;
+}
+
+.project-media {
+  width: 220px;
+  height: 155px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px dashed var(--gray-mid-light);
+  background: var(--gray-mid);
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-placeholder {
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--gray-light);
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.project-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.project-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--purple);
+}
+
+.project-status {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--gray-light);
+}
+
+.project-status.is-active {
+  color: var(--purple-light);
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--white);
+  border: 1px solid var(--gray-mid-light);
+  background: var(--gray-mid);
+}
+
+.project-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: auto;
+  padding-top: 0.15rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--purple-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.project-link:hover {
+  color: var(--purple);
+}
+
+/* "more on the way" placeholder card */
+.project-card.placeholder-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+  border-style: dashed;
+  border-color: var(--gray-mid-light);
+  background: transparent;
+}
+
+.project-card.placeholder-card:hover {
+  border-color: var(--gray-light);
+}
+
+.placeholder-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gray-light);
+}
+
+.blink-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: var(--purple);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
