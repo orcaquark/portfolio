@@ -117,6 +117,7 @@ main {
   flex-shrink: 0;
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: center;
   overflow: hidden;
   border: 2px dashed var(--gray-mid-light);
@@ -164,6 +165,10 @@ main {
   font-size: 0.75rem;
   letter-spacing: 0.03em;
   color: var(--gray-light);
+}
+
+.project-list .project-card:nth-child(even) .project-status {
+  transform: translateX(calc(220px + 2rem));
 }
 
 .project-status.is-active {
