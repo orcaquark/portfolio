@@ -137,7 +137,6 @@ main {
 
 .media-placeholder {
   font-size: 0.75rem;
-  letter-spacing: 0.03em;
   color: var(--gray-light);
   text-align: center;
   padding: 0 0.5rem;
@@ -167,20 +166,18 @@ main {
 .experience-role {
   font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
   color: var(--purple);
 }
 
 .experience-company {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--white);
 }
 
 .experience-dates {
   flex-shrink: 0;
-  font-size: 0.75rem;
-  letter-spacing: 0.03em;
-  color: var(--gray-light);
+  font-size: 0.8rem;
+  color: var(--purple);
   white-space: nowrap;
 }
 
@@ -189,8 +186,8 @@ main {
 }
 
 .experience-location {
-  font-size: 0.8rem;
-  color: var(--gray-light);
+  font-size: 0.9rem;
+  color: var(--white);
 }
 
 .experience-points {
